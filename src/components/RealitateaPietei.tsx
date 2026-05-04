@@ -147,6 +147,10 @@ export default function RealitateaPietei() {
 
   return (
     <section className="rp-section relative py-32 sm:py-40 px-5 sm:px-8 overflow-hidden">
+      <div className="absolute inset-0">
+        <img src="/matrix.png" alt="" className="w-full h-full object-cover object-center" />
+        <div className="absolute inset-0 bg-black/70" />
+      </div>
       <div className="rp-noise" />
       <div className="rp-hex-grid" />
 

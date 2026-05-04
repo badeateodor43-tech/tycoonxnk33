@@ -10,7 +10,6 @@ const navItems = [
   { id: 'home', label: 'Home' },
   { id: 'sales-infrastructure', label: 'Sales Infrastructure' },
   { id: 'inner-circle', label: 'Inner Circle' },
-  { id: 'entrepreneurs', label: 'Entrepreneurs' },
   { id: 'partnerships', label: 'Partnerships' },
 ];
 

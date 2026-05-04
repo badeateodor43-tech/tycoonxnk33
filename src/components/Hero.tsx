@@ -1,12 +1,15 @@
-import { Play, ArrowRight } from 'lucide-react';
+import { Play, ArrowRight, Users, GraduationCap, Zap, Star } from 'lucide-react';
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-5 sm:px-8 pt-28 pb-20 overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none bg-mesh">
-        <div className="orb absolute top-[-20%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-600/[0.12] animate-glow-pulse" />
-        <div className="orb absolute bottom-[-10%] left-[20%] w-[400px] h-[400px] bg-purple-800/[0.08]" />
-        <div className="orb absolute top-[30%] right-[-5%] w-[300px] h-[300px] bg-purple-700/[0.06]" />
+      <div className="absolute inset-0">
+        <img
+          src="/homepage.png"
+          alt=""
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 glow-line-wide" />
@@ -59,6 +62,38 @@ export default function Hero() {
           Intra in Sistem
           <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
         </a>
+
+        <div className="mt-12">
+          <div className="flex items-center justify-center gap-1.5 mb-8">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} size={18} className="text-purple-400 fill-purple-400" />
+            ))}
+            <span className="text-purple-200/70 text-sm font-semibold ml-2">(4.9) BAZAT PE RECENZII</span>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
+            <div className="flex flex-col items-center gap-3 group">
+              <div className="w-14 h-14 rounded-full border border-purple-500/30 bg-purple-500/10 backdrop-blur-sm flex items-center justify-center group-hover:border-purple-400/60 group-hover:bg-purple-500/20 transition-all duration-300">
+                <Users size={24} className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300" />
+              </div>
+              <span className="text-white font-bold text-sm sm:text-base tracking-wide">Networking si Meetings</span>
+            </div>
+
+            <div className="flex flex-col items-center gap-3 group">
+              <div className="w-14 h-14 rounded-full border border-purple-500/30 bg-purple-500/10 backdrop-blur-sm flex items-center justify-center group-hover:border-purple-400/60 group-hover:bg-purple-500/20 transition-all duration-300">
+                <GraduationCap size={24} className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300" />
+              </div>
+              <span className="text-white font-bold text-sm sm:text-base tracking-wide">Apeluri Saptamanale</span>
+            </div>
+
+            <div className="flex flex-col items-center gap-3 group">
+              <div className="w-14 h-14 rounded-full border border-purple-500/30 bg-purple-500/10 backdrop-blur-sm flex items-center justify-center group-hover:border-purple-400/60 group-hover:bg-purple-500/20 transition-all duration-300">
+                <Zap size={24} className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300" />
+              </div>
+              <span className="text-white font-bold text-sm sm:text-base tracking-wide">Acces instant</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
